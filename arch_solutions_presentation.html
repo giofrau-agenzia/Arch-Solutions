@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arch Solutions - Presentazione Agenzia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2d3748;
+            background-color: #f1f5f9;
+        }
+
+        .heading-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        @media print {
+            .page-break {
+                page-break-before: always;
+            }
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .shadow-xl, .shadow-2xl, .shadow-sm {
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="py-6 px-4 md:px-0">
+
+    <!-- Print Control Floating Button -->
+    <div class="fixed bottom-6 right-6 no-print z-50">
+        <button onclick="window.print()" class="bg-amber-600 hover:bg-amber-700 text-white font-medium px-5 py-3 rounded-full shadow-lg transition duration-200 flex items-center space-x-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            <span>Stampa / Salva PDF</span>
+        </button>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-10">
+
+        <!-- PAGINA 1: COPERTINA & POSIZIONAMENTO -->
+        <section class="bg-slate-900 text-white rounded-2xl p-10 md:p-16 shadow-2xl relative overflow-hidden flex flex-col justify-between min-h-[640px]">
+            <div class="absolute -right-16 -top-16 w-80 h-80 bg-amber-600/15 rounded-full blur-3xl"></div>
+            <div class="absolute -left-16 -bottom-16 w-80 h-80 bg-slate-700/25 rounded-full blur-3xl"></div>
+
+            <div>
+                <div class="inline-block border-b-2 border-amber-500 pb-1 text-amber-400 font-semibold uppercase tracking-widest text-xs mb-8">
+                    Consulenza Integrata per Architettura, Edilizia e Contract
+                </div>
+                <h1 class="heading-font text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
+                    ARCH SOLUTIONS
+                </h1>
+                <p class="text-slate-300 text-lg md:text-xl font-light max-w-2xl leading-relaxed">
+                    Partner integrato tecnico e commerciale per la selezione di materiali, finiture, tecnologie d'involucro e arredo per la progettazione contemporanea.
+                </p>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-slate-800">
+                <blockquote class="italic text-amber-200/90 text-lg md:text-xl font-serif mb-6">
+                    "Dall'involucro edilizio all'interior design: un unico partner tecnico-commerciale a supporto della progettazione."
+                </blockquote>
+                <div class="flex flex-wrap gap-4 text-xs text-slate-400 uppercase tracking-wider font-medium">
+                    <span>Residenziale</span> • 
+                    <span>Commerciale</span> • 
+                    <span>Hospitality</span> • 
+                    <span>Office</span> • 
+                    <span>Restauro & Beni Vincolati</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- PAGINA 2: METODO OPERATIVO -->
+        <section class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-200 space-y-8">
+            <div class="border-l-4 border-amber-600 pl-4">
+                <h2 class="heading-font text-2xl md:text-3xl font-semibold text-slate-900">Il Nostro Metodo Operativo</h2>
+                <p class="text-slate-600 mt-1">Un percorso coordinato a supporto di architetti, ingegneri, imprese e rivenditori.</p>
+            </div>
+
+            <p class="text-slate-700 leading-relaxed text-sm md:text-base">
+                <strong>Arch Solutions</strong> offre una consulenza integrata tecnico-commerciale orientata a semplificare il lavoro del progettista e dell'impresa. Garantiamo il perfetto allineamento tra concept estetico, fattibilità strutturale, conformità normativa e rispetto del budget.
+            </p>
+
+            <div class="grid md:grid-cols-5 gap-4 pt-2">
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="text-amber-600 font-bold text-xl mb-3">01</div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-sm">Analisi & Rilievo</h3>
+                        <p class="text-xs text-slate-500 mt-1 leading-normal">Valutazione preliminare di progetto, vincoli di cantiere e normative (CAM, ETA).</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="text-amber-600 font-bold text-xl mb-3">02</div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-sm">Selezione Materiali</h3>
+                        <p class="text-xs text-slate-500 mt-1 leading-normal">Individuazione delle soluzioni e dei brand più idonei tra arredo e sistemi tecnici.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="text-amber-600 font-bold text-xl mb-3">03</div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-sm">Supporto Tecnico</h3>
+                        <p class="text-xs text-slate-500 mt-1 leading-normal">Verifica delle schede tecniche, dettagli costruttivi e campionature.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="text-amber-600 font-bold text-xl mb-3">04</div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-sm">Capitolati & Docs</h3>
+                        <p class="text-xs text-slate-500 mt-1 leading-normal">Redazione della documentazione di capitolato e supporto alle prescrizioni.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="text-amber-600 font-bold text-xl mb-3">05</div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-sm">Assistenza Cantiere</h3>
+                        <p class="text-xs text-slate-500 mt-1 leading-normal">Supporto costante in fase esecutiva per la corretta posa e applicazione.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGINA 3: AREE DI COMPETENZA -->
+        <section class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-200 space-y-8">
+            <div class="border-l-4 border-slate-800 pl-4">
+                <h2 class="heading-font text-2xl md:text-3xl font-semibold text-slate-900">Aree di Competenza</h2>
+                <p class="text-slate-600 mt-1">Ambito di intervento specialistico per l'architettura e l'edilizia.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <h3 class="font-semibold text-slate-900 mb-2 flex items-center space-x-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                        <span>Involucro & Efficienza Termica</span>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Sistemi a cappotto certificati ETA, facciate ventilate, isolanti ad altissime prestazioni a basso spessore sottovuoto per edifici storici e correzione ponti termici.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <h3 class="font-semibold text-slate-900 mb-2 flex items-center space-x-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                        <span>Restauro Conservativo</span>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Pulizia, consolidamento e protezione di beni vincolati, malte storiche naturali formulati secondo tradizione e sistemi protettivi antigraffiti.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <h3 class="font-semibold text-slate-900 mb-2 flex items-center space-x-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                        <span>Superfici & Resine Tecniche</span>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Pavimentazioni continue in resina industriali e artistiche, LVT, PVC tecnici, linoleum, parquet e superfici ad alta affluenza per ambito commerciale e sanità.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <h3 class="font-semibold text-slate-900 mb-2 flex items-center space-x-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                        <span>Architettura degli Spazi</span>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Pareti divisorie modular in vetro e alluminio, porte scorrevoli per interni, porte blindate di sicurezza e sistemi filo muro RasoParete.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <h3 class="font-semibold text-slate-900 mb-2 flex items-center space-x-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                        <span>Arredo Office & Contract</span>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Arredi operativi e direzionali per ufficio, collezioni arredobagno e living d'alta gamma, arredo outdoor in metallo/alluminio e pannelli fonoassorbenti.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <h3 class="font-semibold text-slate-900 mb-2 flex items-center space-x-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                        <span>Illuminazione & Decorazione</span>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Corpi illuminanti decorativi ed architetturali per interni/esterni, sistemi di elettrificazione a binario, carte da parati viniliche e in fibra di vetro.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- PAGINA 4: TABELLA PARTNER & REFERENTI -->
+        <section class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-slate-200 space-y-6">
+            <div class="border-l-4 border-amber-600 pl-4 flex flex-col md:flex-row md:items-center justify-between gap-3">
+                <div>
+                    <h2 class="heading-font text-2xl font-semibold text-slate-900">Partner & Referenti</h2>
+                    <p class="text-slate-600 text-xs mt-0.5">Marchi rappresentati e referenza d'agenzia.</p>
+                </div>
+                <!-- Legenda Badge -->
+                <div class="flex flex-wrap gap-2 text-[11px]">
+                    <span class="px-2.5 py-0.5 rounded-md bg-blue-100 text-blue-800 font-semibold">Maurizio Cuscusa</span>
+                    <span class="px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-semibold">Giorgio & Maurizio</span>
+                    <span class="px-2.5 py-0.5 rounded-md bg-amber-100 text-amber-800 font-semibold">Giorgio Frau</span>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                        <tr class="border-b border-slate-200 bg-slate-100 text-[11px] font-bold text-slate-700 uppercase tracking-wider">
+                            <th class="py-2.5 px-3">Ambito</th>
+                            <th class="py-2.5 px-3">Brand (Sito Ufficiale)</th>
+                            <th class="py-2.5 px-3">Referente Agenzia</th>
+                            <th class="py-2.5 px-3">Focus Progettuale</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-700">
+                        <!-- Maurizio Cuscusa -->
+                        <tr>
+                            <td class="py-2 px-3 font-medium text-slate-900" rowspan="4">Building & Envelope</td>
+                            <td class="py-2 px-3"><a href="https://dinovaitalia.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Dinova ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Maurizio Cuscusa</span></td>
+                            <td class="py-2 px-3 text-slate-600">Cappotto ETA, pitture u.p., deumidificazione.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.isolcore.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Isolcore ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Maurizio Cuscusa</span></td>
+                            <td class="py-2 px-3 text-slate-600">Isolanti termici sottovuoto a basso spessore.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.opificiobioaedilitia.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Opificio Bio Aedilitia ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Maurizio Cuscusa</span></td>
+                            <td class="py-2 px-3 text-slate-600">Malte storiche naturali e bioedilizia.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://docchem.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Docchem ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Maurizio Cuscusa</span></td>
+                            <td class="py-2 px-3 text-slate-600">Restauro conservativo e sistemi antigraffiti.</td>
+                        </tr>
+
+                        <!-- Surfaces -->
+                        <tr>
+                            <td class="py-2 px-3 font-medium text-slate-900" rowspan="2">Flooring & Surfaces</td>
+                            <td class="py-2 px-3"><a href="https://pavaresine.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Pava Resine ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Maurizio Cuscusa</span></td>
+                            <td class="py-2 px-3 text-slate-600">Pavimenti e rivestimenti continui in resina.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.tarkett.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Tarkett ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[10px]">Giorgio & Maurizio</span></td>
+                            <td class="py-2 px-3 text-slate-600">LVT, vinilici, linoleum, parquet, moquette.</td>
+                        </tr>
+
+                        <!-- Wall & Openings -->
+                        <tr>
+                            <td class="py-2 px-3 font-medium text-slate-900" rowspan="4">Wall Decor & Openings</td>
+                            <td class="py-2 px-3"><a href="https://www.inkiostrobianco.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Inkiostro Bianco ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[10px]">Giorgio & Maurizio</span></td>
+                            <td class="py-2 px-3 text-slate-600">Carte da parati viniliche, fibra di vetro e parquet inciso.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://sistemirasoparete.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Sistemi RasoParete ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[10px]">Giorgio & Maurizio</span></td>
+                            <td class="py-2 px-3 text-slate-600">Sistemi e chiusure a filo muro.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.albed.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Albed ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Pareti divisorie vetro/alluminio e porte.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.bauxt.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Bauxt ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Porte blindate di sicurezza di design.</td>
+                        </tr>
+
+                        <!-- Living & Bath -->
+                        <tr>
+                            <td class="py-2 px-3 font-medium text-slate-900" rowspan="7">Living, Bath & Kitchen</td>
+                            <td class="py-2 px-3"><a href="https://www.edra.org/it/home" target="_blank" class="text-blue-700 hover:underline font-semibold">Edra ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Imbottiti e arredi d'alta gamma.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.presotto.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Presotto ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Sistemi modulari giorno e notte.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.elmarcucine.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Elmar Cucine ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Cucine di design componibili.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.rexadesign.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Rexa Design ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Arredobagno sartoriale in Corian®.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://bibaitalia.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Biba Salotti ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Divani e imbottiti per la zona giorno.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.mogg.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Mogg ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Complementi d'arredo concettuali.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.extendo.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Extendo ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Tavoli, librerie e cabine armadio.</td>
+                        </tr>
+
+                        <!-- Office & Acoustics -->
+                        <tr>
+                            <td class="py-2 px-3 font-medium text-slate-900" rowspan="4">Office & Acoustics</td>
+                            <td class="py-2 px-3"><a href="https://www.bralco.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Bralco ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Arredo ufficio e reception.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.inclass.es/" target="_blank" class="text-blue-700 hover:underline font-semibold">Inclass ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Sedute per spazi contract e collettività.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.olivoegroppo.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Olivo & Groppo ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Sedute ergonomiche operative.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.internationalacoustic.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">International Acoustic ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Pannelli per il comfort acustico.</td>
+                        </tr>
+
+                        <!-- Outdoor & Lighting -->
+                        <tr>
+                            <td class="py-2 px-3 font-medium text-slate-900" rowspan="6">Outdoor & Lighting</td>
+                            <td class="py-2 px-3"><a href="https://www.fastspa.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Fast Outdoor ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Arredo outdoor in alluminio.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.isimar.es/" target="_blank" class="text-blue-700 hover:underline font-semibold">İSíMAR ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Arredi outdoor in metallo trattato.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://dominoflowerbox.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Domino ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Fioriere modulari a vasca unica.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.kundalini.it/" target="_blank" class="text-blue-700 hover:underline font-semibold">Kundalini ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Illuminazione decorativa di design.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.novoluxlighting.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Novolux Lighting ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Illuminazione tecnica indoor ed outdoor.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3"><a href="https://www.letroh.com/" target="_blank" class="text-blue-700 hover:underline font-semibold">Letroh ↗</a></td>
+                            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px]">Giorgio Frau</span></td>
+                            <td class="py-2 px-3 text-slate-600">Binari architetturali ed elettrificazione.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PAGINA 5: CONTATTI -->
+        <section class="bg-slate-900 text-white rounded-2xl p-8 md:p-12 shadow-xl space-y-8">
+            <div class="border-l-4 border-amber-500 pl-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h2 class="heading-font text-2xl md:text-3xl font-semibold text-white">Contatti & Referenti Operativi</h2>
+                    <p class="text-slate-400 text-xs mt-1">Siamo a tua disposizione per consulenza integrata su progetti e capitolati.</p>
+                </div>
+                <!-- Mail Unica -->
+                <div class="bg-slate-800 px-4 py-2.5 rounded-xl border border-slate-700 flex items-center space-x-2.5">
+                    <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <a href="mailto:agenzia.gfmc@gmail.com" class="text-amber-400 hover:underline text-sm font-semibold">agenzia.gfmc@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 pt-2">
+                <!-- Referente 1 -->
+                <div class="bg-slate-800/90 p-6 rounded-xl border border-slate-700/80 flex flex-col justify-between">
+                    <div>
+                        <span class="text-amber-400 text-[11px] font-semibold uppercase tracking-wider block mb-1">Commerciale & Specification Sales</span>
+                        <h3 class="text-xl font-bold text-white">Giorgio Frau</h3>
+                        <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                            Consulenza tecnica e commerciale integrata sulla selezione di arredo, finiture decorative, illuminazione e sistemi di chiusura.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center space-x-3">
+                        <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1.01 1.01 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <a href="tel:+393929176573" class="text-white hover:text-amber-400 font-medium transition text-sm">+39 392 917 6573</a>
+                    </div>
+                </div>
+
+                <!-- Referente 2 -->
+                <div class="bg-slate-800/90 p-6 rounded-xl border border-slate-700/80 flex flex-col justify-between">
+                    <div>
+                        <span class="text-amber-400 text-[11px] font-semibold uppercase tracking-wider block mb-1">Responsabile Tecnico & Involucro</span>
+                        <h3 class="text-xl font-bold text-white">Ing. Maurizio Cuscusa</h3>
+                        <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                            Consulenza tecnica e commerciale integrata per capitolati, involucro edilizio, restauro conservativo, resine e supporto in cantiere.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center space-x-3">
+                        <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1.01 1.01 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <a href="tel:+393493347818" class="text-white hover:text-amber-400 font-medium transition text-sm">+39 349 334 7818</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-6 border-t border-slate-800 text-xs text-slate-400">
+                Arch Solutions — Connettiamo la progettazione, la tecnologia e il design per trasformare le idee in soluzioni concrete.
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
