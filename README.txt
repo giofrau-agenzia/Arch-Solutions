@@ -1,0 +1,1 @@
+Inserire loghi in assets/logos e immagini in assets/images
