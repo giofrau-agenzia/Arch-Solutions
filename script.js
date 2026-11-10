@@ -48,7 +48,6 @@ website:"https://www.dinova.it"
 },
 
 Isolcore:{
-category:"Involucro & Efficienza Termica",
 specializzazione:"Isolamento ad altissime prestazioni",
 soluzioni:[
 "Pannelli VIP",
@@ -82,7 +81,6 @@ website:"https://www.docchem.com"
 },
 
 "Tarkett":{
-category:"Superfici & Resine Tecniche",
 specializzazione:"Pavimentazioni resilienti e sostenibili",
 soluzioni:[
 "LVT",
@@ -101,7 +99,6 @@ website:"https://www.tarkett.it"
 },
 
 "Albed":{
-category:"Architettura degli Spazi",
 specializzazione:"Porte e pareti divisorie in vetro",
 soluzioni:[
 "Porte",
@@ -476,13 +473,10 @@ a=>`<span>${a}</span>`
 <p>${company.why}</p>
 
 <br>
-
 <a class="button"
 href="${company.website}"
 target="_blank">
-
 Visita il sito ufficiale →
-
 </a>
 
 `;
@@ -490,7 +484,6 @@ Visita il sito ufficiale →
 box.scrollIntoView({
 behavior:'smooth'
 });
-
 }
 
 // Accordion Aree di Competenza
