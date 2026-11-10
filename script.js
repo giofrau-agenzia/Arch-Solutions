@@ -100,7 +100,7 @@ applicazioni:[
 "Hospitality"
 ],
 why:"Sistema completo e certificato per la riqualificazione energetica.",
-website:"https://www.dinova.it"
+website:"https://dinovaitalia.it/"
 },
 
 Isolcore:{
