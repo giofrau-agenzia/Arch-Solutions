@@ -485,5 +485,3 @@ box.scrollIntoView({
 behavior:'smooth'
 });
 }
-
-// Accordion Aree di Competenza
