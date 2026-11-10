@@ -1,1 +1,334 @@
-<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arch Solutions</title><link rel="stylesheet" href="style.css"></head><body><header class="hero"><div class="overlay"></div><div class="hero-content"><h1>ARCH SOLUTIONS</h1><p>Rappresentanze e consulenza per Architettura, Interior Design, Contract, Building Envelope e Outdoor Living.</p></div></header><section class="controls container"><input id="searchInput" placeholder="Cerca un'azienda..."><div class="filters"><button class="filter active" data-filter="all">Tutte</button><button class="filter" data-filter="Building">Building</button><button class="filter" data-filter="Flooring">Flooring</button><button class="filter" data-filter="Wall">Wall</button><button class="filter" data-filter="Living">Living</button><button class="filter" data-filter="Office">Office</button><button class="filter" data-filter="Outdoor">Outdoor</button></div></section><div class="container"><div id="companyGrid" class="grid"></div></div><div id="modal" class="modal"><div class="modal-content"><span id="close">×</span><h2 id="modalTitle"></h2><p id="modalDescription"></p><a id="modalLink" target="_blank">Visita il sito</a></div></div><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Arch Solutions</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Segoe UI,Arial,sans-serif;
+background:#f5f7fa;
+color:#222;
+line-height:1.6;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:999;
+background:#fff;
+box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.nav{
+max-width:1400px;
+margin:auto;
+height:80px;
+padding:0 30px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+text-decoration:none;
+color:#111827;
+}
+
+.menu{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.hero{
+min-height:85vh;
+background:linear-gradient(135deg,#111827,#1f2937);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:40px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.25rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:white;
+color:#111827;
+text-decoration:none;
+border-radius:40px;
+font-weight:700;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+font-size:2rem;
+text-align:center;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:16px;
+cursor:pointer;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card span{
+font-size:2rem;
+font-weight:bold;
+color:#0f766e;
+}
+
+.area-detail,
+.company-detail{
+display:none;
+margin-top:40px;
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.tags{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+
+.tags span{
+background:#dbeafe;
+padding:8px 12px;
+border-radius:20px;
+font-size:13px;
+}
+
+.team-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.team-card{
+background:white;
+padding:30px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<a class="logo" href="#">
+ARCH SOLUTIONS
+</a>
+
+<ul class="menu">
+<li><a href="#chi-siamo">Chi siamo</a></li>
+<li><a href="#metodo">Metodo</a></li>
+<li><a href="#aree">Competenze</a></li>
+<li><a href="#contatti">Contatti</a></li>
+</ul>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>ARCH SOLUTIONS</h1>
+
+<p>
+Consulenza tecnica e commerciale per
+Building Envelope, Interior Design,
+Contract, Outdoor Living e Illuminazione.
+</p>
+
+<a href="#aree" class="btn">
+Esplora le competenze
+</a>
+
+</div>
+
+</section>
+
+<section id="metodo">
+
+<h2 class="section-title">
+Il Nostro Metodo Operativo
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<span>01</span>
+<h3>Analisi & Rilievo</h3>
+</div>
+
+<div class="card">
+<span>02</span>
+<h3>Selezione Materiali</h3>
+</div>
+
+<div class="card">
+<span>03</span>
+<h3>Supporto Tecnico</h3>
+</div>
+
+<div class="card">
+<span>04</span>
+<h3>Capitolati</h3>
+</div>
+
+<div class="card">
+<span>05</span>
+<h3>Assistenza Cantiere</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="aree">
+
+<h2 class="section-title">
+Aree di Competenza
+</h2>
+
+<div id="areas" class="grid"></div>
+
+<div id="areaDetail" class="area-detail"></div>
+
+<div id="companyDetail" class="company-detail"></div>
+
+</section>
+
+<section id="chi-siamo">
+
+<h2 class="section-title">
+Responsabili Tecnici e Commerciali
+</h2>
+
+<div class="team-grid">
+
+<div class="team-card">
+
+<h3>Giorgio Frau</h3>
+
+<p>
+Responsabile Tecnico e Commerciale
+</p>
+
+</div>
+
+<div class="team-card">
+
+<h3>Maurizio Cuscusa</h3>
+
+<p>
+Responsabile Tecnico e Commerciale
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contatti">
+
+<h2>Contatti</h2>
+
+<p>Giorgio Frau</p>
+
+<p>+39 392 917 6573</p>
+
+<p>agenzia.gfmc@gmail.com</p>
+
+</footer>
+
+<script>
+
+/*
+QUI VA IL DATABASE COMPLETO
+DELLE 8 AREE E DEI PARTNER
+CHE ABBIAMO COSTRUITO
+(Dinova, Isolcore, Docchem,
+Opificio, Tarkett, Albed,
+Inclass, Isimar, Kundalini,
+Edra, Presotto, ecc.)
+*/
+
+</script>
+
+</body>
+</html>
