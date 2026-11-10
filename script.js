@@ -151,7 +151,7 @@ applicazioni:[
 "Retail"
 ],
 why:"Leader mondiale nelle pavimentazioni tecniche.",
-website:"https://www.tarkett.it"
+website:"https://professional.tarkett.it/it_IT/"
 },
 
 "Albed":{
