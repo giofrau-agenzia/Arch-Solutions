@@ -568,8 +568,7 @@ box.innerHTML = `
 
 <h2>${name}</h2>
 
-<p><strong>Categoria:</strong> ${company.category}</p>
-
+<p><strong>Categoria:</strong> ${company.category || ""}</p>
 <br>
 
 <h3>Specializzazione</h3>
