@@ -1,44 +1,15 @@
-.accordion{
-    max-width:1000px;
-    margin:40px auto;
-}
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
 
-.accordion-btn{
-    width:100%;
-    background:#0d1b3d;
-    color:#fff;
-    border:none;
-    padding:20px 25px;
-    margin:10px 0;
-    border-radius:12px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:1.1rem;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
-}
+        const content = btn.nextElementSibling;
+        const symbol = btn.querySelector('span');
 
-.accordion-btn:hover{
-    background:#162b5f;
-}
-
-.accordion-content{
-    max-height:0;
-    overflow:hidden;
-    background:#fff;
-    border-radius:0 0 12px 12px;
-    transition:max-height .4s ease;
-}
-
-.accordion-content ul{
-    list-style:none;
-    padding:20px 30px;
-    margin:0;
-}
-
-.accordion-content li{
-    padding:10px 0;
-    border-bottom:1px solid #eee;
-}
+        if(content.style.maxHeight){
+            content.style.maxHeight = null;
+            symbol.textContent = '+';
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            symbol.textContent = '−';
+        }
+    });
+});
