@@ -212,6 +212,7 @@ applicazioni:[
 ],
 why:"Soluzioni modulari per la valorizzazione degli spazi esterni.",
 website:"https://www.domino-srl.it"
+  };
 },
 
 Dinova:{
@@ -609,7 +610,19 @@ website:"https://www.extendo.it"
 
 "Mogg":{
 category:"Living & Interior Design",
-...
+specializzazione:"Complementi e arredi di design contemporaneo",
+soluzioni:[
+"Complementi",
+"Arredi",
+"Librerie",
+"Oggettistica"
+],
+applicazioni:[
+"Residential",
+"Hospitality",
+"Contract"
+],
+why:"Ricerca stilistica e forte identità progettuale.",
 website:"https://www.mogg.it"
 },
 
