@@ -83,7 +83,136 @@ companies:[
 
 ];
 
-const companies = {
+const companies = {"Pava Resine":{
+category:"Resine e Superfici Tecniche",
+specializzazione:"Rivestimenti continui in resina",
+soluzioni:[
+"Pavimentazioni in resina",
+"Rivestimenti continui",
+"Impermeabilizzazioni",
+"Protezione superfici"
+],
+applicazioni:[
+"Industria",
+"Commerciale",
+"Food",
+"Healthcare"
+],
+why:"Soluzioni ad alte prestazioni per ambienti ad elevata usura.",
+website:"https://www.pavaresine.it"
+},
+
+"Opificio Bio Aedilitia":{
+category:"Restauro Conservativo",
+specializzazione:"Restauro e bioedilizia",
+soluzioni:[
+"Restauro conservativo",
+"Deumidificazione",
+"Consolidamento",
+"Materiali naturali"
+],
+applicazioni:[
+"Edifici storici",
+"Beni vincolati",
+"Pubblico",
+"Residenziale"
+],
+why:"Approccio compatibile con il patrimonio architettonico e i materiali storici.",
+website:"https://www.bioaedilitia.it"
+},
+
+"Sistemi RasoParete":{
+category:"Serramenti e Sistemi Architettonici",
+specializzazione:"Sistemi filo muro e chiusure integrate",
+soluzioni:[
+"Porte filo muro",
+"Botole",
+"Sportelli tecnici",
+"Sistemi integrati"
+],
+applicazioni:[
+"Residential",
+"Hospitality",
+"Office",
+"Contract"
+],
+why:"Pulizia formale e continuità architettonica delle superfici.",
+website:"https://www.sistemirasoparete.com"
+},
+
+"VetroIN":{
+category:"Serramenti e Sistemi Architettonici",
+specializzazione:"Pareti divisorie e sistemi in vetro",
+soluzioni:[
+"Pareti vetrate",
+"Divisioni ufficio",
+"Box meeting",
+"Sistemi trasparenti"
+],
+applicazioni:[
+"Office",
+"Contract",
+"Commerciale"
+],
+why:"Massima luminosità e flessibilità degli spazi.",
+website:"https://www.vetroin.it"
+},
+
+"International Acoustic":{
+category:"Arredo e Contract",
+specializzazione:"Comfort acustico per ambienti interni",
+soluzioni:[
+"Pannelli fonoassorbenti",
+"Controsoffitti acustici",
+"Wall panels",
+"Baffles"
+],
+applicazioni:[
+"Office",
+"Education",
+"Hospitality",
+"Pubblico"
+],
+why:"Migliora il benessere e la qualità acustica degli ambienti.",
+website:"https://www.int-acoustic.com"
+},
+
+"Elite To Be":{
+category:"Arredo e Contract",
+specializzazione:"Complementi e arredo contemporaneo",
+soluzioni:[
+"Arredi",
+"Complementi",
+"Contract",
+"Interior design"
+],
+applicazioni:[
+"Residential",
+"Hospitality",
+"Commerciale"
+],
+why:"Soluzioni di design dedicate agli spazi contemporanei.",
+website:"https://www.elitetobe.com"
+},
+
+"Domino":{
+category:"Arredo e Contract",
+specializzazione:"Fioriere modulari e outdoor design",
+soluzioni:[
+"Fioriere",
+"Separatori verdi",
+"Complementi outdoor",
+"Urban design"
+],
+applicazioni:[
+"Hospitality",
+"Outdoor",
+"Contract",
+"Spazi pubblici"
+],
+why:"Soluzioni modulari per la valorizzazione degli spazi esterni.",
+website:"https://www.domino-srl.it"
+},
 
 Dinova:{
 category:"Involucro & Efficienza Termica",
@@ -480,21 +609,140 @@ website:"https://www.extendo.it"
 
 "Mogg":{
 category:"Living & Interior Design",
-specializzazione:"Design contemporaneo",
+...
+website:"https://www.mogg.it"
+},
+
+"Pava Resine":{
+category:"Resine e Superfici Tecniche",
+specializzazione:"Rivestimenti continui in resina",
 soluzioni:[
-"Complementi",
-"Arredi",
-"Oggettistica"
+"Pavimentazioni in resina",
+"Rivestimenti continui",
+"Impermeabilizzazioni",
+"Protezione superfici"
+],
+applicazioni:[
+"Industria",
+"Commerciale",
+"Food",
+"Healthcare"
+],
+why:"Soluzioni ad alte prestazioni per ambienti ad elevata usura.",
+website:"https://www.pavaresine.it"
+},
+
+"Opificio Bio Aedilitia":{
+category:"Restauro Conservativo",
+specializzazione:"Restauro e bioedilizia",
+soluzioni:[
+"Restauro conservativo",
+"Deumidificazione",
+"Consolidamento",
+"Materiali naturali"
+],
+applicazioni:[
+"Edifici storici",
+"Beni vincolati",
+"Pubblico",
+"Residenziale"
+],
+why:"Approccio compatibile con il patrimonio architettonico e i materiali storici.",
+website:"https://www.bioaedilitia.it"
+},
+
+"Sistemi RasoParete":{
+category:"Serramenti e Sistemi Architettonici",
+specializzazione:"Sistemi filo muro e chiusure integrate",
+soluzioni:[
+"Porte filo muro",
+"Botole",
+"Sportelli tecnici",
+"Sistemi integrati"
 ],
 applicazioni:[
 "Residential",
-"Hospitality"
+"Hospitality",
+"Office",
+"Contract"
 ],
-why:"Ricerca stilistica e forte identità.",
-website:"https://www.mogg.it"
-}
+why:"Pulizia formale e continuità architettonica delle superfici.",
+website:"https://www.sistemirasoparete.com"
+},
 
-};
+"VetroIN":{
+category:"Serramenti e Sistemi Architettonici",
+specializzazione:"Pareti divisorie e sistemi in vetro",
+soluzioni:[
+"Pareti vetrate",
+"Divisioni ufficio",
+"Box meeting",
+"Sistemi trasparenti"
+],
+applicazioni:[
+"Office",
+"Contract",
+"Commerciale"
+],
+why:"Massima luminosità e flessibilità degli spazi.",
+website:"https://www.vetroin.it"
+},
+
+"International Acoustic":{
+category:"Arredo e Contract",
+specializzazione:"Comfort acustico per ambienti interni",
+soluzioni:[
+"Pannelli fonoassorbenti",
+"Controsoffitti acustici",
+"Wall panels",
+"Baffles"
+],
+applicazioni:[
+"Office",
+"Education",
+"Hospitality",
+"Pubblico"
+],
+why:"Migliora il benessere e la qualità acustica degli ambienti.",
+website:"https://www.int-acoustic.com"
+},
+
+"Elite To Be":{
+category:"Arredo e Contract",
+specializzazione:"Complementi e arredo contemporaneo",
+soluzioni:[
+"Arredi",
+"Complementi",
+"Contract",
+"Interior design"
+],
+applicazioni:[
+"Residential",
+"Hospitality",
+"Commerciale"
+],
+why:"Soluzioni di design dedicate agli spazi contemporanei.",
+website:"https://www.elitetobe.com"
+},
+
+"Domino":{
+category:"Arredo e Contract",
+specializzazione:"Fioriere modulari e outdoor design",
+soluzioni:[
+"Fioriere",
+"Separatori verdi",
+"Complementi outdoor",
+"Urban design"
+],
+applicazioni:[
+"Hospitality",
+"Outdoor",
+"Contract",
+"Spazi pubblici"
+],
+why:"Soluzioni modulari per la valorizzazione degli spazi esterni.",
+website:"https://www.domino-srl.it"
+}
 
 const areasContainer = document.getElementById("areas");
 
