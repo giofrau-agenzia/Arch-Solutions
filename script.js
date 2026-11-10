@@ -1,7 +1,54 @@
-const aree =
+const aree = [
+
 {
-name:"Illuminazione",
-description:"Lighting decorativo, tecnico e contract.",
+name:"Isolamento Termico e Involucro",
+description:"Sistemi a cappotto certificati ETA, isolanti ad alte prestazioni e soluzioni per facciate ventilate.",
+companies:[
+"Dinova",
+"Isolcore",
+"Docchem"
+]
+},
+
+{
+name:"Pavimenti e Rivestimenti",
+description:"Vinilici, LVT, linoleum, parquet, laminati, pavimenti tessili e sopraelevati per ambiti residenziali, commerciali e contract.",
+companies:[
+"Tarkett"
+]
+},
+
+{
+name:"Resine e Superfici Tecniche",
+description:"Pavimenti e rivestimenti in resina, applicazioni industriali, alimentari e sanitarie.",
+companies:[
+"Pava Resine"
+]
+},
+
+{
+name:"Restauro Conservativo",
+description:"Pulizia, consolidamento e protezione dei materiali per edifici storici e monumentali.",
+companies:[
+"Opificio Bio Aedilitia",
+"Docchem"
+]
+},
+
+{
+name:"Serramenti e Sistemi Architettonici",
+description:"Porte per interni, porte blindate, sistemi filo muro e pareti divisorie.",
+companies:[
+"Albed",
+"Bauxt",
+"Sistemi RasoParete",
+"VetroIN"
+]
+},
+
+{
+name:"Impianti e Illuminazione",
+description:"Illuminazione tecnica, decorativa, urbana e architetturale per ambienti interni ed esterni.",
 companies:[
 "Kundalini",
 "Novolux",
@@ -11,9 +58,13 @@ companies:[
 },
 
 {
-name:"Living & Interior Design",
-description:"Arredo contemporaneo e design d'interni.",
+name:"Arredo e Contract",
+description:"Soluzioni per uffici, residenziale, hospitality e spazi commerciali. Comfort acustico, outdoor e sistemi modulari.",
 companies:[
+"Bralco",
+"Inclass",
+"Olivo & Groppo",
+"International Acoustic",
 "Edra",
 "Presotto",
 "Elmar",
@@ -21,7 +72,12 @@ companies:[
 "Biba",
 "Elite To Be",
 "Extendo",
-"Mogg"
+"Mogg",
+"Inkiostro Bianco",
+"Fast",
+"Isimar",
+"Domino",
+"Skymatik"
 ]
 }
 
@@ -251,20 +307,94 @@ website:"https://www.kdln.it"
 },
 
 "Novolux":{
-category:"Illuminazione",
-specializzazione:"Illuminazione tecnica e architetturale",
+category:"Impianti e Illuminazione",
+specializzazione:"Illuminazione tecnica e decorativa",
 soluzioni:[
+"Illuminazione tecnica",
+"Illuminazione decorativa",
 "Indoor",
-"Outdoor",
-"Lighting tecnico"
+"Outdoor"
 ],
 applicazioni:[
 "Office",
 "Retail",
 "Hospitality"
 ],
-why:"Ampia gamma per la progettazione illuminotecnica.",
+why:"Ampia gamma di soluzioni per la progettazione illuminotecnica.",
 website:"https://www.novoluxlighting.com"
+},
+  "Lorelux":{
+category:"Impianti e Illuminazione",
+specializzazione:"Illuminazione stradale e per parchi",
+soluzioni:[
+"Illuminazione stradale",
+"Illuminazione urbana",
+"Parchi e aree verdi",
+"Spazi pubblici"
+],
+applicazioni:[
+"Comuni",
+"Parchi",
+"Urbanistica",
+"Outdoor"
+],
+why:"Soluzioni dedicate all'illuminazione urbana e degli spazi pubblici.",
+website:"https://www.lorelux.it"
+},
+
+"Letroh":{
+category:"Impianti e Illuminazione",
+specializzazione:"Illuminazione architetturale",
+soluzioni:[
+"Illuminazione decorativa",
+"Illuminazione architettonica",
+"Progetti custom",
+"Interior Lighting"
+],
+applicazioni:[
+"Hospitality",
+"Retail",
+"Residential",
+"Contract"
+],
+why:"Soluzioni luminose ad alto valore estetico e progettuale.",
+website:"https://www.letroh.com"
+},
+
+"Biba":{
+category:"Arredo e Contract",
+specializzazione:"Divani, letti e imbottiti di design",
+soluzioni:[
+"Divani",
+"Letti",
+"Poltrone",
+"Complementi"
+],
+applicazioni:[
+"Residential",
+"Hospitality",
+"Contract"
+],
+why:"Comfort, qualità costruttiva e design italiano.",
+website:"https://www.bibasalotti.it"
+},
+
+"Skymatik":{
+category:"Arredo e Contract",
+specializzazione:"Pergole bioclimatiche e coperture outdoor",
+soluzioni:[
+"Pergole bioclimatiche",
+"Coperture",
+"Schermature solari",
+"Outdoor Living"
+],
+applicazioni:[
+"Residential",
+"Hospitality",
+"Contract"
+],
+why:"Soluzioni evolute per il comfort e la fruibilità degli spazi esterni.",
+website:"https://www.skymatik.it"
 },
 
 "Edra":{
