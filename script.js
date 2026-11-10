@@ -546,3 +546,25 @@ behavior:'smooth'
 });
 
 }
+
+// Accordion Aree di Competenza
+
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        const content = btn.nextElementSibling;
+        const symbol = btn.querySelector('span');
+
+        if(content.style.maxHeight){
+            content.style.maxHeight = null;
+            symbol.textContent = '+';
+        } else {
+            content.style.maxHeight =
+                content.scrollHeight + 'px';
+            symbol.textContent = '−';
+        }
+
+    });
+
+});
