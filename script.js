@@ -133,7 +133,7 @@ const companies = {
     soluzioni: ["Sicurezza", "Ingressi", "Design"],
     applicazioni: ["Ville", "Residential", "Hospitality"],
     why: "Unisce performance e architettura.",
-    website: "https://www.bauxt.it"
+    website: "https://www.bauxt.com"
   },
   "Kundalini": {
     category: "Impianti e Illuminazione",
