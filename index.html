@@ -1,332 +1,240 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arch Solutions</title>
-<link rel="stylesheet" href="style.css">
-<style>
+<section id="competenze">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+    <div class="container">
 
-html{
-scroll-behavior:smooth;
-}
+        <h2 class="section-title">
+            Aree di Competenza
+        </h2>
 
-body{
-font-family:Segoe UI,Arial,sans-serif;
-background:#f5f7fa;
-color:#222;
-line-height:1.6;
-}
+        <p class="section-intro">
 
-header{
-position:sticky;
-top:0;
-z-index:999;
-background:#fff;
-box-shadow:0 2px 12px rgba(0,0,0,.08);
-}
+            Seleziona un'area di intervento per visualizzare
+            i marchi rappresentati e le soluzioni disponibili.
 
-.nav{
-max-width:1400px;
-margin:auto;
-height:80px;
-padding:0 30px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
+        </p>
 
-.logo{
-font-size:24px;
-font-weight:700;
-text-decoration:none;
-color:#111827;
-}
+        <div id="areasGrid" class="competence-grid">
 
-.menu{
-display:flex;
-gap:25px;
-list-style:none;
-}
+            <div class="competence-card"
+                 onclick="showArea('isolamento')">
 
-.menu a{
-text-decoration:none;
-color:#333;
-font-weight:500;
-}
+                <h3>
+                    Isolamento Termico e Involucro
+                </h3>
 
-.hero{
-min-height:85vh;
-background:linear-gradient(135deg,#111827,#1f2937);
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:40px;
-}
+                <ul>
+                    <li>Sistemi a cappotto certificati ETA</li>
+                    <li>Isolanti ad alte prestazioni</li>
+                    <li>Correzione dei ponti termici</li>
+                    <li>Facciate ventilate</li>
+                </ul>
 
-.hero-content{
-max-width:900px;
-}
+                <div class="responsabile">
 
-.hero h1{
-font-size:4rem;
-margin-bottom:20px;
-}
+                    Responsabile:
+                    Maurizio Cuscusa
 
-.hero p{
-font-size:1.25rem;
-margin-bottom:30px;
-}
+                </div>
 
-.btn{
-display:inline-block;
-padding:15px 30px;
-background:white;
-color:#111827;
-text-decoration:none;
-border-radius:40px;
-font-weight:700;
-}
+                <div class="card-action">
 
-section{
-padding:80px 8%;
-}
+                    Scopri i Partner →
 
-.section-title{
-font-size:2rem;
-text-align:center;
-margin-bottom:50px;
-}
+                </div>
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
+            </div>
 
-.card{
-background:white;
-padding:30px;
-border-radius:16px;
-cursor:pointer;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
-transition:.3s;
-}
 
-.card:hover{
-transform:translateY(-5px);
-}
+            <div class="competence-card"
+                 onclick="showArea('pavimenti')">
 
-.card span{
-font-size:2rem;
-font-weight:bold;
-color:#0f766e;
-}
+                <h3>
+                    Pavimenti e Rivestimenti
+                </h3>
 
-.area-detail,
-.company-detail{
-display:none;
-margin-top:40px;
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
+                <ul>
+                    <li>Vinilici</li>
+                    <li>LVT</li>
+                    <li>Linoleum</li>
+                    <li>Parquet e laminati</li>
+                    <li>Pavimenti tessili</li>
+                </ul>
 
-.tags{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:15px;
-}
+                <div class="responsabile">
 
-.tags span{
-background:#dbeafe;
-padding:8px 12px;
-border-radius:20px;
-font-size:13px;
-}
+                    Responsabili:
+                    Giorgio Frau e Maurizio Cuscusa
 
-.team-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
+                </div>
 
-.team-card{
-background:white;
-padding:30px;
-border-radius:16px;
-text-align:center;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
+                <div class="card-action">
 
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:60px 20px;
-}
+                    Scopri i Partner →
 
-footer a{
-color:#dbeafe;
-text-decoration:none;
-}
+                </div>
 
-footer a:hover{
-text-decoration:underline;
-}
+            </div>
 
-</style>
-</head>
 
-<body>
+            <div class="competence-card"
+                 onclick="showArea('resine')">
 
-<header>
-<div class="nav">
+                <h3>
+                    Resine e Superfici Tecniche
+                </h3>
 
-<a class="logo" href="#">
-ARCH SOLUTIONS
-</a>
+                <ul>
+                    <li>Pavimenti in resina</li>
+                    <li>Applicazioni industriali</li>
+                    <li>Applicazioni sanitarie</li>
+                    <li>Impermeabilizzazioni</li>
+                </ul>
 
-<ul class="menu">
-<li><a href="#chi-siamo">Chi siamo</a></li>
-<li><a href="#metodo">Metodo</a></li>
-<li><a href="#aree">Competenze</a></li>
-<li><a href="#contatti">Contatti</a></li>
-</ul>
+                <div class="responsabile">
 
-</div>
-</header>
+                    Responsabile:
+                    Maurizio Cuscusa
 
-<section class="hero">
+                </div>
 
-<div class="hero-content">
+                <div class="card-action">
 
-<h1>ARCH SOLUTIONS</h1>
+                    Scopri i Partner →
 
-<p>
-Consulenza tecnica e commerciale per
-Building Envelope, Interior Design,
-Contract, Outdoor Living e Illuminazione.
-</p>
+                </div>
 
-<a href="#aree" class="btn">
-Esplora le competenze
-</a>
+            </div>
 
-</div>
 
-</section>
+            <div class="competence-card"
+                 onclick="showArea('restauro')">
 
-<section id="metodo">
+                <h3>
+                    Restauro Conservativo
+                </h3>
 
-<h2 class="section-title">
-Il Nostro Metodo Operativo
-</h2>
+                <ul>
+                    <li>Pulizia dei materiali</li>
+                    <li>Consolidamento</li>
+                    <li>Protezione</li>
+                    <li>Sistemi antigraffiti</li>
+                </ul>
 
-<div class="grid">
+                <div class="responsabile">
 
-<div class="card">
-<span>01</span>
-<h3>Analisi & Rilievo</h3>
-</div>
+                    Responsabile:
+                    Maurizio Cuscusa
 
-<div class="card">
-<span>02</span>
-<h3>Selezione Materiali</h3>
-</div>
+                </div>
 
-<div class="card">
-<span>03</span>
-<h3>Supporto Tecnico</h3>
-</div>
+                <div class="card-action">
 
-<div class="card">
-<span>04</span>
-<h3>Capitolati</h3>
-</div>
+                    Scopri i Partner →
 
-<div class="card">
-<span>05</span>
-<h3>Assistenza Cantiere</h3>
-</div>
+                </div>
 
-</div>
+            </div>
+
+
+            <div class="competence-card"
+                 onclick="showArea('serramenti')">
+
+                <h3>
+                    Serramenti e Sistemi Architettonici
+                </h3>
+
+                <ul>
+                    <li>Porte per interni</li>
+                    <li>Porte blindate</li>
+                    <li>Sistemi filo muro</li>
+                    <li>Pareti divisorie</li>
+                </ul>
+
+                <div class="responsabile">
+
+                    Responsabili:
+                    Giorgio Frau e Maurizio Cuscusa
+
+                </div>
+
+                <div class="card-action">
+
+                    Scopri i Partner →
+
+                </div>
+
+            </div>
+
+
+            <div class="competence-card"
+                 onclick="showArea('illuminazione')">
+
+                <h3>
+                    Impianti e Illuminazione
+                </h3>
+
+                <ul>
+                    <li>Illuminazione tecnica</li>
+                    <li>Illuminazione decorativa</li>
+                    <li>Illuminazione architetturale</li>
+                </ul>
+
+                <div class="responsabile">
+
+                    Responsabile:
+                    Giorgio Frau
+
+                </div>
+
+                <div class="card-action">
+
+                    Scopri i Partner →
+
+                </div>
+
+            </div>
+
+
+            <div class="competence-card"
+                 onclick="showArea('contract')">
+
+                <h3>
+                    Arredo e Contract
+                </h3>
+
+                <ul>
+                    <li>Residenziale</li>
+                    <li>Hospitality</li>
+                    <li>Office</li>
+                    <li>Comfort acustico</li>
+                    <li>Sistemi modulari</li>
+                </ul>
+
+                <div class="responsabile">
+
+                    Responsabile:
+                    Giorgio Frau
+
+                </div>
+
+                <div class="card-action">
+
+                    Scopri i Partner →
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="areaPartners"
+             class="area-partners">
+        </div>
+
+        <div id="companyDetail"
+             class="company-detail">
+        </div>
+
+    </div>
 
 </section>
-
-<section id="aree">
-
-<h2 class="section-title">
-Aree di Competenza
-</h2>
-
-<div id="areas" class="grid"></div>
-
-<div id="areaDetail" class="area-detail"></div>
-
-<div id="companyDetail" class="company-detail"></div>
-
-</section>
-
-<section id="chi-siamo">
-
-<h2 class="section-title">
-Responsabili Tecnici e Commerciali
-</h2>
-
-<div class="team-grid">
-
-<div class="team-card">
-
-<h3>Giorgio Frau</h3>
-
-<p>
-Responsabile Tecnico e Commerciale
-</p>
-
-</div>
-
-<div class="team-card">
-
-<h3>Maurizio Cuscusa</h3>
-
-<p>
-Responsabile Tecnico e Commerciale
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer id="contatti">
-
-<h2>Contatti</h2>
-
-<p><strong>Giorgio Frau</strong></p>
-<p>📞 <a href="tel:+393929176573">+39 392 917 6573</a></p>
-<p>✉️ <a href="mailto:agenzia.gfmc@gmail.com">agenzia.gfmc@gmail.com</a></p>
-
-<br>
-
-<p><strong>Maurizio Cuscusa</strong></p>
-<p>📞 <a href="tel:+393493347818">+39 349 334 7818</a></p>
-<p>✉️ <a href="mailto:agenzia.gfmc@gmail.com">agenzia.gfmc@gmail.com</a></p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
