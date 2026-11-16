@@ -1,67 +1,197 @@
-const areas = [
+const areasGrid = document.getElementById("areasGrid");
+const partnersBox = document.getElementById("areaPartners");
+const companyBox = document.getElementById("companyDetail");
 
-{
-id:"isolamento",
-title:"Isolamento Termico e Involucro",
+/* =========================
+   CREAZIONE CARD AREE
+========================= */
 
-responsabile:"Maurizio Cuscusa",
+function renderAreas() {
 
-items:[
-"Sistemi a cappotto certificati ETA",
-"Isolanti ad alte prestazioni",
-"Correzione ponti termici",
-"Facciate ventilate"
-],
+    if (!areasGrid) return;
 
-partners:[
-"Dinova",
-"Isolcore",
-"Docchem"
-]
-},
+    areasGrid.innerHTML = "";
 
-{
-id:"pavimenti",
+    areas.forEach(area => {
 
-title:"Pavimenti e Rivestimenti",
+        const card = document.createElement("div");
 
-responsabile:
-"Giorgio Frau e Maurizio Cuscusa",
+        card.className = "competence-card";
 
-items:[
-"LVT",
-"Linoleum",
-"Parquet",
-"Laminati"
-],
+        card.innerHTML = `
 
-partners:[
-"Tarkett"
-]
+            <h3>${area.title}</h3>
+
+            <ul>
+                ${area.items
+                    .map(item => `<li>${item}</li>`)
+                    .join("")}
+            </ul>
+
+            <div class="responsabile">
+
+                <strong>Responsabile:</strong><br>
+                ${area.responsabile}
+
+            </div>
+
+            <div style="
+                margin-top:20px;
+                font-weight:700;
+                color:#0f766e;
+            ">
+
+                Scopri i Partner →
+
+            </div>
+
+        `;
+
+        card.addEventListener("click", () => {
+
+            showArea(area);
+
+        });
+
+        areasGrid.appendChild(card);
+
+    });
+
 }
 
-];
+/* =========================
+   PARTNER DELL'AREA
+========================= */
 
-const companies = {
+function showArea(area) {
 
-Dinova:{
-logo:"logos/dinova.jpeg",
-website:"https://dinovaitalia.it"
-},
+    if (!partnersBox) return;
 
-Isolcore:{
-logo:"logos/isolcore.jpeg",
-website:"https://www.isolcore.com"
-},
+    partnersBox.innerHTML = "";
 
-Docchem:{
-logo:"logos/docchem.jpeg",
-website:"https://www.docchem.com"
-},
+    const title = document.createElement("h3");
 
-Tarkett:{
-logo:"logos/tarkett.png",
-website:"https://professional.tarkett.it"
+    title.textContent =
+        `Partner per ${area.title}`;
+
+    title.style.marginBottom = "25px";
+
+    partnersBox.appendChild(title);
+
+    area.partners.forEach(partnerName => {
+
+        const company =
+            companies[partnerName];
+
+        if (!company) return;
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "brand-card";
+
+        card.innerHTML = `
+
+            <img
+                src="${company.logo}"
+                alt="${partnerName}"
+            >
+
+            <h4>
+                ${partnerName}
+            </h4>
+
+        `;
+
+        card.addEventListener("click", () => {
+
+            showCompany(partnerName);
+
+        });
+
+        partnersBox.appendChild(card);
+
+    });
+
+    partnersBox.scrollIntoView({
+        behavior: "smooth"
+    });
+
 }
 
-};
+/* =========================
+   SCHEDA AZIENDA
+========================= */
+
+function showCompany(name) {
+
+    if (!companyBox) return;
+
+    const company =
+        companies[name];
+
+    if (!company) {
+
+        companyBox.innerHTML = `
+            <p>
+                Azienda non trovata.
+            </p>
+        `;
+
+        return;
+
+    }
+
+    companyBox.innerHTML = `
+
+        <div class="company-header">
+
+            <img
+                src="${company.logo}"
+                alt="${name}"
+                class="company-logo"
+            >
+
+            <div>
+
+                <h2>
+                    ${name}
+                </h2>
+
+                <p>
+
+                    <strong>Categoria:</strong>
+                    ${company.category || "N/D"}
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <h3>
+            Specializzazione
+        </h3>
+
+        <p>
+            ${company.specializzazione || ""}
+        </p>
+
+        <br>
+
+        <h3>
+            Soluzioni
+        </h3>
+
+        <ul>
+
+            ${(company.soluzioni || [])
+                .map(item => `
+                    <li>${item}</li>
+                `)
+                .join("")}
+
+       
