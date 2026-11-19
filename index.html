@@ -1,1 +1,313 @@
-<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arch Solutions</title><link rel="stylesheet" href="style.css"></head><body><header class="hero"><div class="overlay"></div><div class="hero-content"><h1>ARCH SOLUTIONS</h1><p>Rappresentanze e consulenza per Architettura, Interior Design, Contract, Building Envelope e Outdoor Living.</p></div></header><section class="controls container"><input id="searchInput" placeholder="Cerca un'azienda..."><div class="filters"><button class="filter active" data-filter="all">Tutte</button><button class="filter" data-filter="Building">Building</button><button class="filter" data-filter="Flooring">Flooring</button><button class="filter" data-filter="Wall">Wall</button><button class="filter" data-filter="Living">Living</button><button class="filter" data-filter="Office">Office</button><button class="filter" data-filter="Outdoor">Outdoor</button></div></section><div class="container"><div id="companyGrid" class="grid"></div></div><div id="modal" class="modal"><div class="modal-content"><span id="close">×</span><h2 id="modalTitle"></h2><p id="modalDescription"></p><a id="modalLink" target="_blank">Visita il sito</a></div></div><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Arch Solutions</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container">
+
+        <a href="#home"
+           class="logo">
+
+            ARCH SOLUTIONS
+
+        </a>
+
+        <nav aria-label="Navigazione principale">
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#chi-siamo">Chi Siamo</a>
+                </li>
+
+                <li>
+                    <a href="#metodo">Metodo</a>
+                </li>
+
+                <li>
+                    <a href="#competenze">Competenze</a>
+                </li>
+
+                <li>
+                    <a href="#partner">Partner</a>
+                </li>
+
+                <li>
+                    <a href="#contatti">Contatti</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section
+    id="home"
+    class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+
+            ARCH SOLUTIONS
+
+        </h1>
+
+        <p>
+
+            Consulenza tecnico-commerciale
+            per architettura,
+            interior design
+            e riqualificazione edilizia.
+
+        </p>
+
+        <a href="#competenze"
+           class="cta-button">
+
+            Scopri le Competenze
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- CHI SIAMO -->
+
+<section id="chi-siamo">
+
+    <h2>
+
+        Chi Siamo
+
+    </h2>
+
+    <p>
+
+        Arch Solutions affianca architetti,
+        progettisti, interior designer
+        e imprese nella selezione di
+        materiali, tecnologie e soluzioni
+        tecniche per l'architettura
+        contemporanea.
+
+    </p>
+
+</section>
+
+<!-- METODO -->
+
+<section id="metodo">
+
+    <h2>
+
+        Il Nostro Metodo Operativo
+
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>
+                📋 Analisi & Rilievo
+            </h3>
+
+            <p>
+                Verifica preliminare del
+                progetto e dei vincoli.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                🧩 Selezione Materiali
+            </h3>
+
+            <p>
+                Scelta delle soluzioni
+                e dei brand più adatti.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                📐 Supporto Tecnico
+            </h3>
+
+            <p>
+                Schede tecniche,
+                dettagli costruttivi
+                e campionature.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                📄 Capitolati
+            </h3>
+
+            <p>
+                Supporto alla
+                documentazione tecnica.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                🏗️ Assistenza Cantiere
+            </h3>
+
+            <p>
+                Affiancamento durante
+                la fase esecutiva.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- AREE -->
+
+<section id="competenze">
+
+    <h2>
+
+        Aree di Competenza
+
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            Isolamento Termico e Involucro
+        </div>
+
+        <div class="card">
+            Pavimenti e Rivestimenti
+        </div>
+
+        <div class="card">
+            Resine e Superfici Tecniche
+        </div>
+
+        <div class="card">
+            Restauro Conservativo
+        </div>
+
+        <div class="card">
+            Serramenti e Sistemi Architettonici
+        </div>
+
+        <div class="card">
+            Impianti e Illuminazione
+        </div>
+
+        <div class="card">
+            Arredo e Contract
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PARTNER -->
+
+<section id="partner">
+
+    <h2>
+
+        Partner
+
+    </h2>
+
+    <p>
+
+        Aziende selezionate
+        e specializzate nelle
+        diverse aree di competenza.
+
+    </p>
+
+    <div id="partner-grid"></div>
+
+</section>
+
+<!-- CONTATTI -->
+
+<section id="contatti">
+
+    <h2>
+
+        Contatti
+
+    </h2>
+
+    <p>
+
+        Arch Solutions
+
+    </p>
+
+    <p>
+
+        Giorgio Frau<br>
+        Maurizio Cuscusa
+
+    </p>
+
+</section>
+
+<footer>
+
+    <p>
+
+        © Arch Solutions
+
+    </p>
+
+</footer>
+
+<script src="companies.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
