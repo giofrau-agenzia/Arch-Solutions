@@ -216,7 +216,17 @@
     <div class="cards">
 
         <div class="card">
-            Isolamento Termico e Involucro
+            class="card area-card"
+    onclick="filterByArea('Isolamento Termico e Involucro')">
+
+    <h3>
+        Isolamento Termico e Involucro
+    </h3>
+
+    <p>
+        Scopri i partner specializzati
+    </p>
+
         </div>
 
         <div class="card">
@@ -249,39 +259,15 @@
 
 <!-- PARTNER -->
 
-<section id="partner">
+<section
+    id="partner"
+    style="display:none;">
 
-    <h2>
+    <h2 id="partner-title">
 
-        Partner
+        Partner Area
 
     </h2>
-
-    <p>
-
-        Aziende selezionate
-        e specializzate nelle
-        diverse aree di competenza.
-
-    </p>
-    <div class="partner-tools">
-
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Cerca un partner...">
-
-    <select id="areaFilter">
-
-        <option value="">
-            Tutte le aree
-        </option>
-
-        ...
-
-    </select>
-
-</div>
 
     <div id="partner-grid"></div>
 
