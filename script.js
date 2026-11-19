@@ -1,22 +1,87 @@
 const grid =
 document.getElementById("partner-grid");
 
-companies.forEach(company => {
+const searchInput =
+document.getElementById("searchInput");
 
-    const card =
-    document.createElement("div");
+const areaFilter =
+document.getElementById("areaFilter");
 
-    card.className =
-    "partner-card";
+function renderPartners(list){
 
-    card.innerHTML = `
+    grid.innerHTML = "";
 
-        <h3>${company.name}</h3>
+    list.forEach(company => {
 
-        <p>${company.area}</p>
+        const card =
+        document.createElement("div");
 
-    `;
+        card.className =
+        "partner-card";
 
-    grid.appendChild(card);
+        card.innerHTML = `
 
-});
+            <h3>
+                ${company.name}
+            </h3>
+
+            <p>
+                ${company.area}
+            </p>
+
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+}
+
+function filterPartners(){
+
+    const searchValue =
+    searchInput.value
+    .toLowerCase();
+
+    const selectedArea =
+    areaFilter.value;
+
+    const filtered =
+    companies.filter(company => {
+
+        const matchName =
+        company.name
+        .toLowerCase()
+        .includes(searchValue);
+
+        const matchArea =
+
+        selectedArea === ""
+
+        ||
+
+        company.area ===
+        selectedArea;
+
+        return (
+            matchName &&
+            matchArea
+        );
+
+    });
+
+    renderPartners(filtered);
+
+}
+
+searchInput.addEventListener(
+    "input",
+    filterPartners
+);
+
+areaFilter.addEventListener(
+    "change",
+    filterPartners
+);
+
+renderPartners(companies);
