@@ -1,1 +1,153 @@
-const companies=[{name:'Tarkett',category:'Flooring',logo:'assets/logos/tarkett.png',image:'assets/images/tarkett.jpg',website:'https://www.tarkett.it',description:'Pavimentazioni resilienti'},{name:'Inclass',category:'Office',logo:'assets/logos/inclass.png',image:'assets/images/inclass.jpg',website:'https://www.inclass.es',description:'Sedute contract'},{name:'Isimar',category:'Outdoor',logo:'assets/logos/isimar.png',image:'assets/images/isimar.jpg',website:'https://www.isimar.es',description:'Arredo outdoor'},{name:'Edra',category:'Living',logo:'assets/logos/edra.png',image:'assets/images/edra.jpg',website:'https://www.edra.com',description:'Arredi iconici'}];const grid=document.getElementById('companyGrid');function render(list){grid.innerHTML='';list.forEach(c=>{const d=document.createElement('div');d.className='card';d.innerHTML=`<div class="company-image"><img src="${c.image}" alt=""></div><div class="company-content"><img class="company-logo" src="${c.logo}"><h3>${c.name}</h3><p>${c.description}</p></div>`;d.onclick=()=>{modal.style.display='flex';modalTitle.innerText=c.name;modalDescription.innerText=c.description;modalLink.href=c.website};grid.appendChild(d)})}render(companies);document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');let f=b.dataset.filter;render(f==='all'?companies:companies.filter(c=>c.category===f))});searchInput.onkeyup=e=>render(companies.filter(c=>c.name.toLowerCase().includes(e.target.value.toLowerCase())));close.onclick=()=>modal.style.display='none';
+const companies = [
+
+{
+name:"Albed",
+area:"Serramenti e Sistemi Architettonici"
+},
+
+{
+name:"Bauxt",
+area:"Serramenti e Sistemi Architettonici"
+},
+
+{
+name:"Biba",
+area:"Arredo e Contract"
+},
+
+{
+name:"Bralco",
+area:"Arredo e Contract"
+},
+
+{
+name:"Dinova",
+area:"Isolamento Termico e Involucro"
+},
+
+{
+name:"Docchem",
+area:"Restauro Conservativo"
+},
+
+{
+name:"Domino",
+area:"Arredo e Contract"
+},
+
+{
+name:"Edra",
+area:"Arredo e Contract"
+},
+
+{
+name:"Elite To Be",
+area:"Arredo e Contract"
+},
+
+{
+name:"Elmar",
+area:"Arredo e Contract"
+},
+
+{
+name:"Extendo",
+area:"Arredo e Contract"
+},
+
+{
+name:"Fast",
+area:"Arredo e Contract"
+},
+
+{
+name:"Inclass",
+area:"Arredo e Contract"
+},
+
+{
+name:"Inkiostro Bianco",
+area:"Arredo e Contract"
+},
+
+{
+name:"International Acoustic",
+area:"Arredo e Contract"
+},
+
+{
+name:"Isimar",
+area:"Arredo e Contract"
+},
+
+{
+name:"Isolcore",
+area:"Isolamento Termico e Involucro"
+},
+
+{
+name:"Kundalini",
+area:"Impianti e Illuminazione"
+},
+
+{
+name:"Letroh",
+area:"Impianti e Illuminazione"
+},
+
+{
+name:"Lorelux",
+area:"Impianti e Illuminazione"
+},
+
+{
+name:"Mogg",
+area:"Arredo e Contract"
+},
+
+{
+name:"Novolux",
+area:"Impianti e Illuminazione"
+},
+
+{
+name:"Olivo & Groppo",
+area:"Arredo e Contract"
+},
+
+{
+name:"Opificio Bio Aedilitia",
+area:"Restauro Conservativo"
+},
+
+{
+name:"Pava Resine",
+area:"Resine e Superfici Tecniche"
+},
+
+{
+name:"Presotto",
+area:"Arredo e Contract"
+},
+
+{
+name:"Rexa Design",
+area:"Arredo e Contract"
+},
+
+{
+name:"Sistemi RasoParete",
+area:"Serramenti e Sistemi Architettonici"
+},
+
+{
+name:"Tarkett",
+area:"Pavimenti e Rivestimenti"
+},
+
+{
+name:"VetroIN",
+area:"Serramenti e Sistemi Architettonici"
+}
+
+];
